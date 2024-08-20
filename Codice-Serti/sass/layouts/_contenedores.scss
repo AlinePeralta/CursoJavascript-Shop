@@ -1,0 +1,28 @@
+// Ariel Millán
+// esto sirve para....
+
+/* -- contenedores  ---*/
+
+
+.contenedor-full {
+    margin: 2em;
+}
+
+.contenedor-half {
+    max-width: 600px;
+    margin: 0 2em;
+}
+
+.ejemplos{
+    background-color: $fondo-cards;
+    padding: 2em;
+    border-radius: $borde-redondeado;
+    margin-bottom: 1em;
+}
+
+.ejemplos p:last-child,
+.ejemplos ol:last-child
+.ejemplos dl:last-child
+.ejemplos ul:last-child{
+    margin-bottom: 0;
+}

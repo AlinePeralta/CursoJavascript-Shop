@@ -1,0 +1,40 @@
+/* -- Encabezados -- */
+
+.encabezados {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin-bottom: 2em;
+    border-bottom: 1px solid $neutral-bg;
+}
+
+
+// Espacio para colocar los textos
+.encabezados .textos {
+    flex-grow: 3; 
+}
+
+
+.encabezados h2 {
+    margin-bottom: 0.3em;
+}
+
+// Opcional
+.encabezados .textos p{
+    color: $neutral;
+}
+
+
+
+// Espacio para colocar los botones (opcional)
+.encabezados .acciones {
+flex-grow: 1;
+display: flex;
+justify-content: end;
+}
+
+
+
+
+
+

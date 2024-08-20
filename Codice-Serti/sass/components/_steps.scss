@@ -1,0 +1,51 @@
+/*-- Steps
+Se utilizan para ennumerar pasos de un proceso como en un formulario--*/
+
+
+.steps {
+    list-style: none;
+}
+
+.step {
+    padding: 10px 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.step .text {
+    margin-right: 1rem;
+}
+
+.step .numero {
+    display: block-inline;
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 2px solid $marca-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $fuente;
+    line-height: 1em;
+    background-color: $textos-bg;
+
+}
+
+.step.activo .numero {
+    background-color: $acento;
+    color: $blanco;
+    border-color: $acento;
+    font-weight: $fuente-bold;
+
+}
+
+.step.activo .text {
+    font-weight: $fuente-bold;
+}
+
+.step.done .numero {
+    background-color: $correcto;
+    color: $blanco;
+    border-color: $correcto;
+}

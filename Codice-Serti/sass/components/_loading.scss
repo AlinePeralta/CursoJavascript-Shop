@@ -1,0 +1,204 @@
+/*--- Loadings --*/
+.contenido h4{
+padding-top: 50px;
+}
+
+  
+/*--- spinner--*/
+// .load-spinner{
+//     display: flex;
+//     align-content: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     width: auto;
+//     height: auto;
+//     padding: 70px;
+//     background: $bg-loading;
+// }
+
+// .load-spinner {
+//   display: flex;
+//   align-content: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   width: 100vw;
+//   height: 100vh;
+//   padding: 70px;
+//   background: $bg-loading;
+//   position: absolute;
+// }
+
+.load-spinner {
+  position: absolute; 
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%; 
+  height: 100%;
+  padding: 70px;
+  background: rgba(195, 202, 249, .8);
+}
+
+.spinner{
+position: relative;
+align-self: center;
+    height: 80px;
+    width: 80px;
+    // border: 6px solid;
+    // border-color:80cento transparent $acento transparent;
+    border: 8px solid $acento-bg;
+    border-right-color: $acento;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.text-spinner{
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+@keyframes spin{
+    to{
+      transform:rotate(360deg)  
+    }
+}
+
+.text-spinner {
+    width: fit-content;
+    align-self: center;
+    font-weight: 400;
+    padding: 2px;
+    font-size: $fuente-mediana;
+    color: #0000;
+    background: linear-gradient(90deg,$acento calc(50% + 0.5ch),$acento-bg) right/calc(200% + 1ch) 100%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    animation: textspin 2s infinite steps(11);
+  }
+  .text-spinner:before {
+    content:"Cargando..."
+  }
+  @keyframes textspin {to{background-position: left}}
+
+
+/*--- Personalizado --*/
+
+.load-custom-bg{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 70px;
+  background: $bg-loading;
+  position: absolute;
+}
+
+.load-custom{
+  position: relative;
+  align-self: center;
+  
+  height:90px;
+  width: 280px;
+background-image: $logo;
+background-size:100%;
+z-index: 10;
+background-repeat: no-repeat;
+margin: auto;
+animation: custom 1s infinite cubic-bezier(0.5,200,0.5,-200);
+}
+@keyframes custom{
+  50%,100% {transform:translateY(0.2px)}
+}
+
+
+
+/*--- BarraProgreso --*/
+
+.load-barra {
+    width: 100%;
+    height: 6px;
+    margin-top: -4px;
+    border-radius:5px;
+    color: $acento;
+    border: 0px solid;
+    position: relative;
+  }
+  .load-barra::before {
+    content: "";
+    position: absolute;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: barra 2s infinite;
+  }
+  @keyframes barra {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+        opacity: 0;
+    }
+  }
+
+
+
+/*--- Skeleton --*/
+
+.placeholderskeleton{
+   height: auto;
+   width: auto;
+   color: transparent;
+   border-radius: 10px;
+   border: 0 solid;
+   margin: 10px 2px 10px 2px;
+   animation: skeleton 3s infinite ;
+}
+
+.placeholderskeleton a{
+    color: transparent!important;
+ }
+
+ .placeholderskeleton ul li a:hover{
+    border-bottom: transparent;
+ }
+
+ .placeholderskeleton span{
+    color: transparent!important;
+    background: $skeleton;
+ }
+ .placeholderskeleton .badge{
+    color: transparent!important;
+   
+ }
+ .placeholderskeleton .active{
+  background: $skeleton;
+ }
+ .placeholderskeleton li {
+background: $skeleton!important;
+ }
+
+
+ .placeholderskeleton  table{
+    background: $skeleton; 
+    border-radius: 10px;
+  
+ }
+
+
+ @keyframes skeleton{
+    0%{
+        background: $skeleton;
+    }
+
+    50%{
+        background: $skeleton-load;
+    }
+    100%{
+        background: $skeleton;
+    }
+ }

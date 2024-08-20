@@ -1,0 +1,287 @@
+.modal-content {
+    z-index: 500!important;
+    position: fixed;
+    background: $blanco;
+    width: 28%;
+    right: 0;
+    margin-right: 20px;
+    padding: 26px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    gap: 1;
+    margin-top: 8px; 
+    margin-left: -50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    transform: translateX(50%);
+    box-shadow: 0 0 0 500vmax $bg-overlay;
+
+    @include mob {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    @include tab {
+        width: 70%;
+    }
+
+    @include lap {
+        width: 50%;
+    }
+
+    @include larg {
+        width: 40%;
+    }
+
+    @include desk {
+        width: 35%;
+    }
+
+    @include desk-large {
+        width: 30%;
+    }
+}
+
+.modal-content.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content form {
+    margin: 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.action-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center; /* Center the button horizontally */
+    
+    &:hover {
+        transform: scale(.5);
+    }
+}
+
+/* -- modal para detalle de transacciones -- */
+
+.detalle-estatus {
+    margin: 8px 0 5px 0;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template:
+    "estatus importe" /
+    80% 20%;
+    
+    @include mob {
+        grid-template:
+        "estatus" /
+        auto;
+    }
+
+    @include tab {
+        grid-template:
+        "estatus importe" /
+        70% 30%;
+    }
+}
+
+.detalle-estatus .estatus {
+    grid-area: estatus;
+    padding-top: 4px;
+}
+
+.detalle-estatus .importe {
+    grid-area: importe;
+    text-align: right;
+    font-weight: $fuente-bold;
+}
+
+.detalle {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: grid;
+    grid-template:
+    "iconDtx texto" /
+    20px auto;
+
+  
+}
+
+.detalle .iconDtx {
+    grid-area: iconDtx;
+    color: $acento;
+
+    @include mob {
+        font-size: 1.2rem;
+    }
+
+    @include tab {
+        font-size: 1.5rem;
+    }
+}
+
+.iconDtx .icon {
+    color: $acento;
+}
+
+.detalle .texto {
+    grid-area: texto;
+    font-size: $fuente-label;
+    font-weight: $fuente-bold;
+    padding-left: 6px;
+
+    @include mob {
+        font-size: $fuente-pequena;
+    }
+
+    @include tab {
+        font-size: $fuente-mediana;
+    }
+}
+
+.avisotx {
+    padding: 0;
+    margin-bottom: -15px;
+}
+
+.fixed {
+    .box {
+        padding-top: 10px;
+    }
+    &.disable{
+        color:$neutral-bg;
+        
+    }
+}
+
+.scrollAuto {
+    height: calc(80vh - 260px); 
+    overflow-y: auto;
+    padding-right: 10px;
+
+    @include mob {
+        height: calc(80vh - 20px); 
+    }
+
+    @include tab {
+        height: calc(80vh - 30px);
+    }
+
+    @include lap {
+        height: calc(80vh - 40px); 
+    }
+
+    @include larg {
+        height: calc(80vh - 50px); 
+    }
+
+    @include desk {
+        height: calc(80vh - 200px); 
+    }
+
+    @include desk-large {
+        height: calc(70vh - 100px); 
+    }
+}
+
+
+.datosComercio {
+    display: grid;
+    grid-template:
+    "merchant afiliacion" /
+    auto auto;
+    font-size: $fuente-noti;
+    margin-top: -16px;
+}
+
+.datosComercio .merchant {
+    grid-area: merchant;
+}
+
+.datosComercio .afiliacion {
+    grid-area: afiliacion;
+}
+
+.datosComercio .terminal {
+    grid-area: terminal;
+}
+
+.detalle .banco {
+    font-size: 5rem!important;
+
+    @include mob {
+        font-size: 3rem!important;
+    }
+
+    @include tab {
+        font-size: 4rem!important;
+    }
+}
+
+.modal-content .avisos {
+    display: grid;
+    border-radius: 4px;
+    margin-bottom: .8rem!important;
+    vertical-align: middle !important;
+    column-gap: 20px;
+    align-content: center;
+    padding: 5px;
+    padding-top: 8px!important;
+    grid-template: "icon texto" / 10px auto;
+
+    @include mob {
+        grid-template: "icon texto" / 15px auto;
+    }
+
+    @include tab {
+        grid-template: "icon texto" / 12px auto;
+    }
+}
+
+.detalleTX {
+    overflow-y: auto;
+    max-height: calc(100vh - 140px);
+
+    @include mob {
+        max-height: calc(100vh - 100px);
+    }
+
+    @include tab {
+        max-height: calc(100vh - 120px);
+    }
+
+    @include lap {
+        max-height: calc(100vh - 130px);
+    }
+
+    @include larg {
+        max-height: calc(100vh - 140px);
+    }
+
+    @include desk {
+        max-height: calc(100vh - 150px);
+    }
+
+    @include desk-large {
+        max-height: calc(100vh - 160px);
+    }
+}

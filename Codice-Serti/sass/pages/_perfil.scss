@@ -1,0 +1,256 @@
+
+article{
+    .perfil{
+        height: 100%;
+    }
+}
+
+// portada
+.portada-profile {
+    position: relative; 
+    background-image: $portada-profile;
+    background-size: cover;
+    background-position: center center;
+    
+    width: 100%;
+    height: 24vh;
+    margin: 0;
+    padding: 0!important;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    overflow: hidden; 
+}
+
+.portada-profile::before {
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    border-radius: 5px; 
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left;
+    z-index: 200;
+    color: $blanco;
+    text-align: left;
+    left: 19vw;
+}
+
+.info-profile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 18vw;
+        margin-top: -10px;
+    }
+// portada
+
+
+
+.profile{
+   
+    display: grid;
+    vertical-align: middle!important;
+    column-gap: 30px;
+    align-content: center;
+    padding: 8px;
+
+    padding-top: 16px;
+      grid-template:
+      "menu-profile content-profile"/
+      16vw auto;
+}
+
+
+
+
+
+.menu-profile{
+    grid-area: menu-profile;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2000;
+    top: 300px;
+    width: 300px;
+    height: 590px;
+    padding-right: 5px;
+
+}
+
+.logo-comercio{
+    background-image: $logo-profile;
+    background-color: $textos-bg;
+    border: .3em solid $texto-hover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+
+}
+
+.menu-profile .logo-comercio{
+padding: 50px;
+margin-top: 20px;
+margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    }
+
+
+.menu-comercio{
+    list-style: none;
+    font-size: $fuente;
+    
+
+}
+.menu-comercio li {
+    color: $textos;
+    line-height: 2em;
+    padding: 2px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  
+}
+
+.menu-comercio li a{
+    color: $textos;
+ }
+.menu-comercio li a:hover{
+   background-color: $marca;
+   padding: 1px 10px 1px 10px;
+   border-radius: 20px;
+   color: $blanco;
+  
+}
+
+.content-profile{
+    grid-area: content-profile;
+    background-color: white;
+    padding: 3em;
+    border-radius: 10px;
+
+}
+
+.datos-profile{
+    display: grid;
+    max-width: 1600px;
+    grid-template-columns: repeat(3, auto);
+}
+
+.inline{
+    display: inline-block;
+}
+
+// dispositivos
+
+.dipositivos_content{
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(3, auto);
+}
+
+.dipositivos_item{
+    background-color: $neutral-bg2;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    display: grid;
+    align-content: center;
+    padding-top: 20px;
+      grid-template:
+      "dipositivos_img dispositivos_info dispositivos_estatus"/
+     160px auto auto;
+
+}
+
+.dispositivos_info{
+    grid-area: dispositivos_info;
+    .dispositivos_nombre{
+        font-size: $fuente-grande;
+    }
+    .dispositivos_aplic{
+        color: $acento;
+        margin-top: -10px;
+        font-size: $fuente-mediana;
+    }
+    .dispositivos_info_p {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      font-size: $fuente-mediana;
+    }
+   
+}
+.dispositivos_info_p p{
+    margin-bottom: 4px;
+}
+
+
+.dipositivos_img{
+    grid-area: dipositivos_img;   
+    .dispo1{
+        background-image:$dispo1;
+        background-size: cover;
+        width: 140px;
+        height: 140px;
+        background-repeat: no-repeat;
+    }
+    .dispo2{
+        background-image:$dispo2;
+        background-size: cover;
+        width: 150px;
+        height: 150px;
+
+        background-repeat: no-repeat;
+    }
+}
+
+.dispositivos_estatus{
+    grid-area: dispositivos_estatus;
+   text-align: right;
+   padding-right: 20px;
+}
+
+.banners{
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(2, auto);
+margin-top: 20px;
+ 
+}
+.banner1{
+    background-image: url('/Codice-Serti/img/clientes/feenicia/banner1.png');
+    background-size: contain;
+    height: 170px;
+    background-repeat: no-repeat;
+    width: 100%;
+cursor: pointer;
+}
+.banner2{
+    background-image: url('/Codice-Serti/img/clientes/feenicia/banner2.png');
+    background-size: contain;
+    height: 170px;
+    background-repeat: no-repeat;
+    width: 100%;
+cursor: pointer;
+background-position: right;
+
+}
+
+

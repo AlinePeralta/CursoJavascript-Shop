@@ -1,0 +1,22 @@
+
+/* -- Divisores --*/
+
+
+hr{
+    margin: 1em 0;
+&.detalle{
+    margin: .4em 0;
+    border-color: #EBEBEB!important;
+}
+
+}
+
+@media (max-width: 1600px) {
+  
+    hr{
+        margin: 1em 0;
+    &.detalle{
+        margin: .2em 0;
+        border-color: #EBEBEB!important;
+    }
+    }}

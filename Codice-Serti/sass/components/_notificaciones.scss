@@ -1,0 +1,351 @@
+.notificaciones {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    font-size: 1rem; /* Use a default size or variable */
+}
+
+.notificaciones .icon {
+    position: relative;
+    transition-duration: 0.2s;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.notificaciones input[type='checkbox'] {
+    display: none;
+}
+
+.notification-icon {
+    cursor: pointer;
+}
+
+.notificaciones input[type='checkbox']:checked + .notification-icon + .panel {
+    transform: scaleY(1);
+}
+
+.notificaciones .panel {
+    display: block;
+    position: absolute;
+    right: -50px;
+    text-align: left;
+    background: $blanco;/* Use a color variable if defined */
+    border-radius: 1em;
+    width: 400px;
+    margin-top: 20px;
+    padding: 20px;
+    z-index: 100;
+    height: auto;
+    transform: scaleY(0);
+    transform-origin: top left;
+    transition-duration: 0.2s;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.notificaciones .panel .titulo {
+    display: grid;
+    align-content: center;
+    grid-template:
+    "titulo-noti link-noti"/
+   70% auto;
+   .titulo-noti{
+    grid-area: titulo-noti;
+
+    line-height:2;
+}
+.link-noti{
+    grid-area: link-noti;   
+    color: $acento;
+    text-align: right;
+}
+
+h4{
+    line-height:2;
+}
+
+}
+
+.item{
+    background-color: $textos-bg;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    .fecha{
+        text-align: right;
+        font-size: $fuente-extrapequena;
+        
+    }
+}
+
+
+.notificaciones ul{
+    margin: 0 0 0 0!important;
+}
+
+ul li .item-noti{
+    width: 100%;
+    display: grid;
+    vertical-align: middle!important;
+    column-gap: 14px;
+    align-content: center;
+    grid-template:
+    "icon texto nuevo-noti"/
+    10px auto 4px;
+}
+
+.icon{
+    grid-area: icon;
+    
+}
+
+ .texto{
+    grid-area: texto;
+    font-weight: $fuente-light;
+    padding-bottom: 8px;
+    line-height: 1.4;
+    font-size: $fuente-mediana;
+ 
+} 
+.item-noti .icon{
+    color: $acento!important;
+}
+
+ .nuevo-noti{
+    grid-area: nuevo-noti;
+
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid $skeleton; 
+    &.new{
+        background-color: $correcto!important;
+      
+    }
+}
+
+ 
+
+.notificaciones .panel .titulo a {
+    font-size: 0.9rem; /* Use a default size or variable */
+    color: $acento; 
+    text-decoration: underline;
+}
+
+.notificaciones .panel .titulo a:hover {
+    color: $acento; /* Use a color variable if defined */
+    text-decoration: none;
+}
+
+// .notificaciones .panel ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style-type: none;
+// }
+
+// .notificaciones .panel li {
+//     margin-bottom: 5px;
+//     word-break: keep-all;
+//     display: block;
+//     position: relative;
+// }
+
+.notificaciones a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 1em;
+
+}
+
+// .notificaciones .panel ul li a:hover {
+//     background-color: #e9e9e9; /* Use a color variable if defined */
+// }
+
+// .notificaciones .panel ul li a .icono {
+//     width: 3em;
+//     height: 3em;
+//     float: left;
+// }
+
+// .notificaciones .panel ul li a .texto {
+//     font-size: 1rem; /* Use a default size or variable */
+//     font-weight: $fuente-light; /* Use a font weight variable if defined */
+//     margin-bottom: .5em;
+// }
+
+// .notificaciones .panel ul li a .fecha {
+//     font-size: 0.8rem; /* Use a default size or variable */
+//     font-weight:$fuente-light; /* Use a font weight variable if defined */
+//     color: $neutral; /* Use a color variable if defined */
+// }
+
+// .notificaciones .panel ul li.item.nuevo a {
+//     font-weight: bold; /* Use a font weight variable if defined */
+
+// }
+
+// .notificaciones .panel ul li.item.nuevo a .fecha,
+// .notificaciones .panel ul li.item.nuevo a .texto {
+//     font-weight: bold; /* Use a font weight variable if defined */
+// }
+
+.notificaciones a.marcartodo {
+    padding: 1em 0 0;
+   margin-top: 10px;
+    border-top: 1px solid lightgray; /* Use a color variable if defined */
+    font-size: 0.8rem; /* Use a default size or variable */
+    color: $acento;
+    cursor: pointer!important;/* Use a color variable if defined */
+    display: flex;
+    align-items: center;
+}
+
+.notificaciones a:hover.marcartodo {
+    color: $acento; /* Use a color variable if defined */
+}
+
+body.marca .notificaciones .icon {
+    color: $blanco;/* Use a color variable if defined */
+}
+
+.marcartodo .icon{
+    color: $acento!important;
+}
+
+body.marca .notificaciones .icon:hover {
+    color: $acento /* Use a color variable if defined */
+}
+
+.marca.icon.checkbox:hover {
+    color: $acento!important; /* Use a color variable if defined */
+}
+
+.profile-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    
+   
+}
+
+.profile-menu li {
+  
+    width: 600px;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-menu .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-menu .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-menu input[type='checkbox'] {
+    display: none;
+}
+
+.profile-menu input[type='checkbox']:checked + .profile-icon + .dropdown {
+    display: block;
+}
+
+.profile-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+.profile-header {
+    display: grid;
+    align-items: center;
+    background-color: $marca;
+    color: $blanco;
+    column-gap: 20;
+    padding: 10px;
+    width: 100%;
+    justify-content: start;
+    grid-area:
+    "avatar profile-info"/
+    20% 80%;
+.avatar{
+    width: 40px;
+    height: 40px;
+    grid-area: avatar;
+    
+}
+
+.profile-info{
+    grid-area: profile-info;
+    padding-left: 50px;
+    text-align: left;
+    .usuario{
+        font-size: $fuente-mediana; 
+        font-weight: $fuente-bold;
+
+    }
+    .correo {
+        margin-top: 4px;
+        font-size: $fuente-pequena;
+        
+    }
+}
+}
+
+
+
+.profile-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-option {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background: none;
+
+    border: none;
+    cursor: pointer;
+    color: $textos;
+    font-size: $fuente-mediana; 
+  
+
+   
+}
+.icon{
+    // color: $blanco;
+    font-size: $fuente-ico;
+    font-weight: $fuente-normal;
+    li{
+        margin-top: 20px;        }
+}
+.profile-option:hover {
+    background-color:$tabla-hover;
+    
+}

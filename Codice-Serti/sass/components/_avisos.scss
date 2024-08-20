@@ -1,0 +1,347 @@
+/* -- Avisos -- */
+.overlay {
+  position: absolute;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 70px;
+  background: rgba(195, 202, 249, .8) !important;
+  z-index: 100;
+
+  /*@include mob {
+    height: 100vh;
+    padding: 40px;
+  }*/
+}
+
+.avisos {
+  display: grid;
+  border-radius: 4px;
+  background-color: $blanco;
+  margin-bottom: 2rem;
+  vertical-align: middle !important;
+  column-gap: 20px;
+  align-content: center;
+  padding: 8px;
+  padding-top: 16px;
+  grid-template:
+    "icon texto cerrar" /
+    10px auto 24px;
+
+  &.correcto {
+    background-color: $correcto-bg;
+    color: $correcto;
+  }
+
+  &.advertencia {
+    background-color: $advertencia-bg;
+    color: $advertencia;
+  }
+
+  &.error {
+    background-color: $error-bg;
+    color: $error;
+  }
+
+  &.info {
+    background-color: $marca-bg;
+    color: $marca;
+  }
+
+}
+
+.avisos .icon {
+  grid-area: icon;
+  font-size: 1.4em;
+}
+
+.avisos .texto {
+  grid-area: texto;
+  margin-bottom: 0;
+  line-height: 1.6em;
+  font-size: $fuente-noti;
+
+ 
+}
+
+.avisos .cerrar {
+  grid-area: cerrar;
+  cursor: pointer;
+  color: $textos;
+}
+
+/* Alertas */
+
+.alerta-sencila {
+  position: relative;
+  background-color: $blanco;
+  align-items: top;
+  margin: 2% auto;
+  min-height: auto;
+  max-width: 600px;
+  padding: 14px;
+
+  -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 10px;
+  animation: zoomIn .7s ease-in-out;
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+
+  }
+
+
+}
+
+.alerta-sencila .acciones {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.alerta-sencila .titulo {
+  color: $marca;
+}
+
+
+
+
+
+.alertas {
+  position: relative;
+  display: grid;
+  align-items: top;
+  margin: 2% auto;
+  min-height: auto;
+  max-width: 600px;
+  padding: 14px;
+
+  -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 10px;
+  background-color: $blanco !important;
+  grid-template:
+    "linea icon contenido" /
+    10px 2em auto;
+  animation: zoomIn .7s ease-in-out;
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+
+  }
+
+  &.alerta-correcto .icon {
+    color: $correcto;
+  }
+
+
+  &.alerta-error .icon {
+    color: $error;
+  }
+
+  &.alerta-advertencia .icon {
+
+    color: $advertencia;
+  }
+
+  &.alerta-info .icon {
+
+    color: $marca;
+  }
+
+}
+
+.alertas .linea {
+  grid-area: linea;
+  width: 3px;
+  height: 100%;
+  border-radius: 5px;
+
+}
+
+.alertas .icon {
+  grid-area: icon;
+  font-size: 2em;
+  padding-top: 0.5em;
+}
+
+.alertas .contenido {
+  grid-area: contenido;
+  padding: 1em;
+}
+
+.alertas .acciones {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.alerta-correcto .titulo {
+  color: $correcto;
+}
+
+
+.alerta-error .titulo {
+  color: $error;
+}
+
+.alerta-advertencia .titulo {
+  background-color: $blanco;
+  color: $advertencia;
+}
+
+.alerta-info .titulo {
+
+  color: $marca;
+}
+
+/*line*/
+.alerta-correcto .linea {
+  background-color: $correcto;
+}
+
+
+.alerta-error .linea {
+  background-color: $error;
+}
+
+.alerta-advertencia .linea {
+
+  background-color: $advertencia;
+}
+
+.alerta-info .linea {
+
+  background-color: $marca;
+}
+
+
+
+/* Toast */
+
+.toast {
+  position: fixed;
+  /*Cambiar position fixed para los componentes */
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px !important;
+  display: grid;
+  align-items: center;
+  background-color: $blanco;
+  margin: 1% auto;
+  max-width: 450px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 10px;
+  grid-template:
+    "linea icon contenido cerrar" /
+    12px 2em auto 30px;
+  animation: zoomIn .7s ease-in-out;
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+
+  }
+}
+
+
+.toast .linea {
+  grid-area: linea;
+  width: 3px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.toast .icon {
+  grid-area: icon;
+  font-size: 2em;
+
+}
+
+.toast .contenido {
+  grid-area: contenido;
+  padding: 10px;
+  font-size: $fuente-mediana;
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.toast .cerrar {
+  grid-area: cerrar;
+  cursor: pointer;
+  color: $textos;
+  right: 0;
+
+  & .icon {
+    font-size: 1.5em;
+  }
+
+}
+
+
+/*line*/
+.toast-correcto .linea {
+  background-color: $correcto;
+}
+
+
+.toast-error .linea {
+  background-color: $error;
+}
+
+.toast-advertencia .linea {
+
+  background-color: $advertencia;
+}
+
+.toast-info .linea {
+
+  background-color: $marca;
+}
+
+/*line*/
+
+.toast-correcto .icon {
+  color: $correcto;
+}
+
+
+.toast-error .icon {
+  color: $error;
+}
+
+.toast-advertencia .icon {
+
+  color: $advertencia;
+}
+
+.toast-info .icon {
+
+  color: $marca;
+}

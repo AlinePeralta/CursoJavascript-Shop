@@ -1,0 +1,42 @@
+
+/*--- Badge--*/
+
+.badge {
+  display: inline-block;
+  padding: .3em .7em;
+  font-weight: $fuente-normal;
+  font-size: $fuente-mediana;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 4rem;
+  color: $textos;
+  background-color:$neutral-bg;
+
+  &.correcto {
+    background-color: $correcto-bg;
+    color: $correcto;
+  }
+
+  &.advertencia {
+    background-color:$advertencia-bg;
+    color: $advertencia;
+  }
+
+  &.error {
+    background-color:$error-bg;
+    color: $error;
+  }
+
+}
+
+@media (max-width: 1600px) {
+  .badge {
+
+    padding: .2em .4em;
+    font-weight: $fuente-extrapequena;
+ 
+  
+}
+}

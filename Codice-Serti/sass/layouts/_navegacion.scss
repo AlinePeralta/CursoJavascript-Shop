@@ -1,0 +1,199 @@
+/* - navegación principal del sitio */
+
+/* Para menú lateral */
+
+/*--- menu lateral --- */
+
+nav {
+    /*  padding-top: 1em;*/
+    background-color: $blanco;
+    z-index: 10;
+  }
+
+  nav.disabled {
+    pointer-events: none;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 4px 0;
+    font-size: $fuente-mediana;
+    position: relative;
+  }
+  
+  nav ul li a {
+    padding: 0.8em 2em;
+    color: $textos;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    vertical-align: middle !important;
+    border-right: 3px solid transparent;
+    position: relative;
+  }
+  
+  nav ul li a i {
+    color: $neutral-hover;
+    margin-right: 0.5em;
+    margin-top: -6px;
+  }
+  
+  nav ul li a:hover {
+    background-color: $pagina;
+    color: $textos;
+    border-right: 3px solid $acento;
+    border-radius: 16px 0 0 16px;
+  }
+  
+  nav ul li a:hover i {
+    color: $acento;
+     border-radius: 16px 0 0 16px;
+  }
+  
+  nav ul li a.activo,
+  nav ul li a.activo i {
+    color: $acento;
+    font-weight: $fuente-bold;
+    background-color: $acento;
+    border-radius: 16px 0 0 16px;
+  }
+  
+  nav li .icon {
+    font-size: 1.4em;
+    padding-top: 4px;
+    padding-right: 4px;
+  }
+  
+  nav ul li .submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    background-color: $texto-hover;
+    border-radius: 16px 0 0 0;
+  }
+  
+
+  
+  nav ul li .submenu li {
+    margin: 4px 0;
+  }
+  
+  nav ul li .submenu li a {
+    padding: 0.5em 1.5em;
+    border-right: none;
+    font-size: $fuente-pequena;
+  }
+  
+  .arrow {
+    margin-left: auto;
+    transition: transform 0.3s;
+  }
+  
+  .arrow::before {
+    content: '⮟';
+    display: inline-block;
+    transform: rotate(0deg);
+  }
+  
+  .open .arrow::before {
+    transform: rotate(-180deg);
+  }
+  
+  .active-submenu {
+    border-right: 3px solid $acento;
+  }
+  
+  /*-- menú horizontal */
+  
+  .fullscreen nav {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .fullscreen nav ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  .fullscreen nav ul li .submenu {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    background-color: $texto-hover;
+    border-radius: 16px 0 0 0;
+    animation: slideDown 0.3s ease forwards; 
+  }
+  
+
+
+
+  .fullscreen nav ul li a {
+    padding: 0.9em 3em 0.5em;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    border: 0;
+  }
+  
+  .fullscreen nav ul li a i {
+    color: $neutral-hover;
+    margin-right: 0.5em;
+    margin-top: -6px;
+  }
+  
+  .fullscreen nav ul li a:hover {
+    border-bottom: 3px solid $acento;
+  }
+  
+  .fullscreen ul li a:hover i {
+    color: $acento;
+  }
+  
+  .fullscreen nav ul li a.activo,
+  .fullscreen nav ul li a.activo i {
+    color: $acento;
+    background-color: transparent;
+  }
+  
+  .fullscreen nav ul li a.activo {
+    border-bottom: 3px solid $acento;
+    font-weight: $fuente-bold;
+  }
+  
+  // cambios de color para personalización
+  
+  body.marca nav {
+    background-color: $marca;
+  }
+  
+  body.dark nav {
+    background-color: $textos;
+  }
+  
+  body.marca nav ul li a,
+  body.dark nav ul li a,
+  body.marca nav ul li a i,
+  body.dark nav ul li a i {
+    color: $textos-inv;
+  }
+  
+  body.marca nav ul li a:hover {
+    background-color: $marca-hover;
+  }
+  
+  body.dark nav ul li a:hover {
+    background-color: $texto-hover;
+  }
+  
+  .item.icon span {
+    color: $textos;
+  }
+  

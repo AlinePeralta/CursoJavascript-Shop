@@ -1,0 +1,50 @@
+// Breakpoints
+// _variables.scss
+
+$bp-mob: 576px;
+$bp-tab: 768px;
+$bp-lap: 992px;  
+$bp-larg: 1200px;
+$bp-desk: 1440px;
+$bp-desk-large: 1600px;
+
+
+// _mixins.scss
+
+@mixin tab {
+  @media (min-width: $bp-mob) and (max-width: $bp-tab) {
+    @content;
+  }
+}
+
+@mixin mob {
+  @media (max-width: $bp-mob) {
+    @content;
+  }
+}
+
+@mixin lap {
+  @media (min-width: $bp-tab) and (max-width: $bp-lap) {
+    @content;
+  }
+}
+
+@mixin larg {
+  @media (min-width: $bp-lap) and (max-width: $bp-larg) {
+    @content;
+  }
+}
+
+@mixin desk {
+  @media (min-width: $bp-larg) and (max-width: $bp-desk) {
+    @content;
+  }
+}
+
+@mixin desk-large {
+  @media (min-width: $bp-desk-large) {
+    @content;
+  }
+}
+
+

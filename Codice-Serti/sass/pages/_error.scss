@@ -1,0 +1,79 @@
+.bg-error{
+  
+    margin: auto;
+    padding: 2em;
+    margin-bottom: 1em;
+   background-color: $marca;
+    
+}
+
+.epage-contenido{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+.logo{
+        margin: auto;
+        background-position: center;
+        background-image: $logo-inv;
+        margin-bottom: -30px;
+    }
+
+    .epage-texto{
+        color: $blanco;
+        .epage-titulo{
+            font-size: $fuente-codError;
+            margin-top: -30px;
+        
+        }
+        .epage-description{
+        font-size: $fuente-grande;
+        line-height: 1.2;
+        margin-top: -18px;
+        }
+    }
+ 
+}
+
+   
+.e404{
+    background: $e404;
+    padding: 300px 20px 0px 0px;
+    background-size:400px;
+
+}
+
+.e401{
+  background: $e401;
+    padding: 300px 20px 0px 0px;
+    background-size:400px;
+  
+}
+
+.e403{
+    background: $e403;
+    padding: 300px 20px 0px 0px;
+    background-size:400px;
+  
+
+}
+
+
+.e502{
+    background: $e502;
+    padding: 300px 20px 0px 0px;
+    background-size:400px;
+  
+    margin-top: px;
+    margin-left: 20px; 
+}
+
+.e505{
+    background: $e505;
+    padding: 300px 20px 0px 0px;
+    background-size:400px;
+  
+    margin-top: px;
+    margin-left: 20px; 
+}
+

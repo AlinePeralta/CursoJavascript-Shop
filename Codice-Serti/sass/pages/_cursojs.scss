@@ -1,0 +1,372 @@
+
+ul li{
+    list-style-type: none;    
+}
+
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+
+    .contenido {
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        height: 100vh; 
+        justify-content: space-between;
+        background-color: $marca;
+        padding-right: 0;
+
+        header, footer {
+            padding: 1rem;
+            background-color: $marca;
+            padding-right: 40px;
+        }
+
+
+        nav {
+            background-color: $marca;
+            flex: 1; 
+            position: sticky;
+            overflow-y: auto;
+            top: 0;
+        }
+    }
+
+    .logo-inv {
+        background-image: $logo-inv;
+        width: $logo-width;
+        height: $logo-height;
+        left: 1em;
+        top: 8px;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-indent: -99999px;
+
+        span {
+            display: none;
+        }
+    }
+
+    footer {
+        background: none;
+        color: $neutral-bg;
+
+        a {
+            color: $acento;
+        }
+    }
+}
+
+
+.contenidoTienda {
+    padding: 2em;
+    background-color: $blanco;
+    border-radius: 20px;
+    overflow-y: auto; 
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 1rem;
+
+    @include desk {
+        grid-template-columns: 1fr;
+    }
+
+    @include tab {
+        grid-template-columns: 1fr;
+    }
+
+    @include mob {
+        grid-template-columns: 1fr;
+    }
+
+    .carrito{
+        padding: 2rem;  
+        .d-none{
+            display: none!important;
+        }
+    }
+}
+
+.carritoDispo{
+    display: flex;
+    flex-direction: row;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: space-around;
+   align-content: center;
+    gap: .6rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: .4rem;
+    color: $blanco;
+    background-color: $acento;
+    font-weight: $fuente-normal;
+
+    h3{
+        font-size: $h6;
+        text-align: left;
+        font-weight: $fuente-normal;
+
+        @include desk {
+            font-size: $fuente;
+        }
+    }
+    p{
+        margin-bottom: 8px;
+        font-size: $h6;
+    }
+
+}
+
+.carritoEmpty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carritoVaciar{
+    display: flex;
+    background-color: $neutral-bg2;
+    color: $marca;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.carritoVacio{
+    font-size: $h3;
+    margin-top: 10px;
+
+}
+.img-carrito{
+    width: 40%;
+}
+.carritoEliminar {
+    cursor: pointer;
+    background-color: $acento-bg;
+    border:none;
+    padding: 4px;
+    font-size:$fuente-extrapequena;
+    border-radius: 20px;
+    margin-top: -10px;
+    @include desk{
+        font-size:$fuente-extrap-responsive;
+        padding: 2px;
+    }
+
+   
+}
+
+.carritoTotal{
+    margin-top: 1rem;
+    span{
+        color: $acento;
+    }
+}
+
+.carrito-dispositivos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+  
+}
+
+
+
+.dipositivos_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.dispositivo-agregar {
+    border: 0;
+    background-color: $acento;
+    color: $blanco;
+    padding: .5rem;
+    border-radius: 20px;
+    width: 100%;
+    cursor: pointer;
+    border: 2px solid $acento;
+    font-family: $fuente-primaria;
+    font-size: $fuente;
+    transition: background-color .2s, color .2s;
+
+    &:hover {
+        background-color: $acento-bg;
+        color: $acento;
+    }
+
+    &.secundary{
+        background-color: $acento-bg;
+        color: $acento;
+        font-size: $fuente;
+    }
+
+    @include desk{
+        padding: .2rem; 
+    }
+}
+
+.dipositivos_item {
+    position: relative;
+    background-color: $skeleton;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+
+    // .dipositivos_img {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     max-width: 100%;
+    //     align-content: center;
+    //     margin-bottom: 20px;
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     width: 100%;
+    //     height: 150px;
+    //     padding: 10px;
+
+    //     // .dispo1,
+    //     // .dispo2,
+    //     // .dispo3,
+    //     // .dispo4,
+    //     // .dispo5,
+    //     // .dispo6 {
+    //     //     background-size: contain;
+    //     //     background-repeat: no-repeat;
+    //     //     background-position: center;
+    //     //     width: 150px;
+    //     //     height: 150px;
+    //     //     padding: 10px;
+    //     // }
+
+    //     .dispo1 {
+    //         background-image: $dispo1;
+    //     }
+
+    //     .dispo2 {
+    //         background-image: $dispo2;
+    //     }
+
+    //     .dispo3 {
+    //         background-image: $dispo3;
+    //     }
+
+    //     .dispo4 {
+    //         background-image: $dispo4;
+    //     }
+
+    //     .dispo5 {
+    //         background-image: $dispo5;
+    //     }
+
+    //     .dispo6 {
+    //         background-image: $dispo6;
+    //     }
+    // }
+
+
+    .dispositivos_info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .dispositivos_nombre {
+            font-size: $h4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dispositivo-precio {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            gap: .2rem;
+            margin-top: -5px;
+            color: $neutral;
+            margin-bottom: 20px;
+            font-weight: $fuente-normal;
+
+            span {
+                font-size: $fuente-label;
+                font-weight: $fuente-light;
+            }
+        }
+
+        .dispositivos_info_p {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            line-height: .60;
+            font-size: $fuente-label;
+        }
+    }
+}
+
+.menuShop{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: .5rem;
+font-family: $fuente-primaria;
+}
+
+.bontonMenu{
+    background-color: transparent;
+    border: 0;
+    color: $blanco;
+    font-size:$fuente;
+    cursor: pointer;
+    font-family: $fuente-primaria;
+    display: flex;
+    gap: 1rem;
+    padding: .5rem;
+    a{
+        color: $blanco; 
+        text-decoration: none;
+        display: flex;
+        gap: 1rem;
+        align-self: center;
+        align-content: center;
+        i{
+            margin-top: -1.5px;
+        }
+    }
+    &.active{
+        background-color: $blanco;
+        color: $acento;
+        width: 100%;
+        padding-right: 0;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem ;
+    }
+    
+}
+
+.botonCarrito{
+    margin-top: 2rem;
+   
+}
+.dispo_img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    align-content: center;
+    margin-bottom: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: auto;
+    margin: auto;
+}

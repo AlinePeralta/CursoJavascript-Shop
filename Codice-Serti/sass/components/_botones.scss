@@ -1,0 +1,94 @@
+/*-- Botones --*/
+
+a {
+    color: $acento;
+    text-decoration: none;
+}
+a:hover {
+    color: $acento-hover;
+    text-decoration: none;
+}
+
+a.cerrar{
+    text-decoration: none;
+    color: $neutral;
+}
+
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8em 1em;
+    margin: 0 8px 8px 0;
+    font-size: $fuente-mediana;
+    font-family: $fuente-botones;
+    font-weight: $fuente-light;
+    cursor: pointer;
+    transition: ease-in-out, width .35s ease-in-out;
+    border: 1px solid $neutral-bg;
+    border-radius: 4px;
+    color: $marca;
+    text-decoration: none;
+    text-align: center;
+    background-color: $blanco;
+}
+
+button i{
+    margin-right: 0.5em;
+}
+
+button .material-symbols-rounded{
+    font-size: 1.5em;
+}
+
+button:hover {
+    background-color: $neutral-bg;
+}
+
+button[type=submit], button.principal {
+    background-color: $marca;
+    color: $textos-inv;
+    width: 200px;
+}
+
+button[type=submit]:hover, button:hover.principal {
+    background-color: $marca-hover;
+}
+
+ button.acento {
+    background-color: $acento;
+    color: $textos-inv;
+    border: none;
+}
+ button:hover.acento {
+    background-color: $acento-hover!important;
+}
+
+button[type=reset] {
+    background-color: $neutral;
+    color: $textos-inv
+}
+
+button[type=reset]:hover {
+    background-color: $neutral-hover;
+}
+
+
+
+.boton.grande {
+    padding: 16px 32px;
+
+}
+
+.boton:disabled,
+.boton.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+    color: $neutral-bg;
+}
+
+
+
+

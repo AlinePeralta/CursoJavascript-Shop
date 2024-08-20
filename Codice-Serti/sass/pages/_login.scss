@@ -1,0 +1,252 @@
+.logo {
+    background-image: $logo;
+    width: $logo-width;
+    height: $logo-height;
+    left: 1em;
+    top: 8px;
+    background-position: left;
+    background-repeat: no-repeat;
+    text-indent: -99999px;
+    @include lap {
+        margin-left: 10px;
+     
+    }
+    @include mob {
+        margin-left: 10px;
+     
+    }
+  }
+
+  .container-login{
+    form{
+        margin-top: -16px;
+    }
+  }
+
+  
+  .login .panel {
+    padding: 2em;
+    margin-bottom: 1em;
+    background-color: $blanco;
+    margin: auto;
+
+
+
+
+    h2{
+        padding-left: 10px;
+
+        @include mob {
+            font-size: 2em;
+            margin-bottom: -2px;
+        }
+
+       
+      }
+    
+    @include desk-large {
+      padding: 3em;
+    }
+  
+    @include desk {
+      padding: 2.5em;
+    }
+  
+    @include larg {
+      padding: 2.5em;
+    }
+  
+    @include tab {
+      padding: 2em;
+      margin-bottom: 1.5em;
+    }
+  
+    @include mob {
+      padding: 1.5em;
+      margin-bottom: 1em;
+      width: 90%;
+      border-radius: 10px;
+    }
+  }
+  
+  .login footer {
+    background: transparent;
+    padding: 4em 0 2em 0;
+  
+    @include desk-large {
+      padding: 4em 0 2em 0;
+    }
+  
+    @include desk {
+      padding: 3em 0 2em 0;
+    width: 90%;
+    }
+  
+    @include larg {
+      padding: 3em 0 2em 0;
+       width: 90%;
+    }
+  
+    @include tab {
+      padding: 2em 0 1.5em 0;
+       width: 90%;
+    }
+  
+    @include mob {
+      padding: 1.5em 0 1em 0;
+      margin-top: 80px;
+    }
+  }
+  
+  .login .blanco {
+    color: $blanco;
+  
+  }
+
+ ///LOGIN QUETZALCOATL
+
+ .login-quetzal {
+
+  .logo {
+    background-image: $logo;
+    width: auto;
+    height: $logo-height;
+    text-align: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -99999px;
+
+    @include desk-large {
+      margin-left: 10px;
+    }
+
+    @include desk {
+      margin-left: 10px;
+    }
+
+    @include larg {
+      margin-left: 10px;
+    }
+
+    @include tab {
+      margin-left: 10px;
+    }
+
+    @include mob {
+      margin-left: 10px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.container-login {
+  form {
+    margin-top: -16px;
+    @include mob {
+      padding: 1.2em;
+      margin-bottom: 1em;
+      border-radius: 10px;
+    }
+  }
+}
+
+.login-quetzal .panel {
+  padding: .8em;
+  margin-bottom: 1em;
+  background-color: $blanco;
+  margin: auto;
+  border-radius: 20px;
+  height: 700px;
+  width: 480px;
+
+  h2 {
+    padding-left: 0;
+    font-size: 1.8em;
+
+    @include desk-large {
+      font-size: 1sem;
+    }
+
+    @include desk {
+      font-size: 1.8em;
+    }
+
+    @include larg {
+      font-size: 1.8em;
+    }
+    @include lap {
+      font-size: 1.8em;
+    }
+
+
+    @include tab {
+      font-size: 2.5em;
+    }
+
+    @include mob {
+      font-size: 2em;
+      margin-bottom: -2px;
+      text-align: center;
+    }
+  }
+
+  @include desk-large {
+    padding: 3em;
+  }
+
+  @include desk {
+    padding: 2.5em;
+  }
+
+  @include larg {
+    padding: 2.5em;
+  }
+
+  @include tab {
+    padding: 2em;
+    margin-bottom: 1.5em;
+  }
+
+  @include mob {
+    padding: 1.4em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    height: 540px;
+    width: 420px;
+  }
+}
+
+.login-quetzal footer {
+  background: transparent;
+  padding: 4em 0 2em 0;
+  color: $blanco;
+
+  @include desk-large {
+    padding: 4em 0 2em 0;
+  }
+
+  @include desk {
+    padding: 3em 0 2em 0;
+    width: 90%;
+  }
+
+  @include larg {
+    padding: 3em 0 2em 0;
+    width: 90%;
+  }
+
+  @include tab {
+    padding: 2em 0 1.5em 0;
+    width: 90%;
+  }
+
+  @include mob {
+    padding: 1.5em 0 1em 0;
+    margin-top: 80px;
+  }
+}
+
+.login-quetzal .blanco {
+  color: $blanco;
+}

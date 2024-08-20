@@ -1,0 +1,8 @@
+# # Ignorar todos los archivos map
+
+
+# Ignorar package.json
+package.json
+
+# Ignorar todos los archivos de texto
+*.txt

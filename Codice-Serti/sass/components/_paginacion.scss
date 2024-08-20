@@ -1,0 +1,30 @@
+.pagination-container {
+    text-align: right;
+    margin: 20px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination button {
+    color: $textos;
+    float: left;
+    padding: 8px 14px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 4px;
+    height: 36px;
+    border-radius: 4px;
+}
+
+.pagination button:hover {
+    background-color: $neutral-bg2;
+    color: $acento;
+}
+
+.pagination button.active {
+    background-color: $acento;
+    color: $blanco;
+    border: 1px solid $acento;
+}

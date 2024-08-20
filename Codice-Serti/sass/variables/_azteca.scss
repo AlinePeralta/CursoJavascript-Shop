@@ -1,0 +1,146 @@
+// Las variables globales determinan las características reutilizables por todos los elementos del sitio, puden ser colores, paddings, márgenes, etc.
+
+//Están precedidos por el símbolo "$" y al colocoralos en una clase se escribe solo su nombre
+//ej
+//color: $marca
+
+
+// A. Colores
+
+//Colores de la marca estos se modifican en caso de integración o marca blanca,
+//Se usan para las acciones principales del sitio o portal.
+
+
+//Color principal de la marca
+$marca: #17a54d;
+$marca-hover: #278252;
+$marca-bg: #f1f2f6;
+
+// Color secundario o acento de la marca
+$acento: #278252;
+$acento-hover:#165c37;
+$acento-bg: #f1f2f6;
+
+
+// Colores para estados de los elemntos, de preferencia no cambiar.
+$correcto: #36b57f;
+$correcto-hover: #52CB98;
+$correcto-bg: #C8EFDE;
+$advertencia: hsl(40.235, 100%, 50%);
+$advertencia-hover: hsl(40.235, 100%, 60%);
+$advertencia-bg: #FFEECC;
+$error: #e62a00;
+$error-hover: #ff431a;
+$error-bg: #FFCDC2;
+$neutral: hsl(240, 8%, 36%);
+$neutral-hover: hsl(240, 8%, 46%);
+
+
+// Colores para textos
+
+$textos: #0C0C21; // Solo se usan en textos sobre fondos claros
+$texto-hover: #002862;
+$textos-inv: #ffffff; // Solo se usan en textos sobre fondos oscuros
+$texto-error: #E62A00; //Estados de error
+
+$textos-bg: #eee;
+
+
+// Colores para fondos
+
+$blanco: #FFFFFF;
+$claro: #f6f6f6;
+$pagina: #f3f3f3;
+$fondo-cards: #ffffff;
+
+//colores de fondos de estados, etiquetas.
+$correcto-bg: #c8efde;
+$advertencia-bg: #ffeecc;
+$error-hover-bg: #ffcdc2;
+$neutral-bg: hsl(240, 8%, 86%);
+
+
+// colores para tablas
+
+$tabla-row: #fafafa;
+$tabla_row-alt: #f1f1f1;
+//Fondos de tabla {
+$tabla-hover: #f9f9f9;
+
+
+
+// Colores para bordes
+$color-borde: hsl(240, 8%, 90%);
+// Bordes redondeados
+$borde-redondeado: 0.75em;
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); 
+// Fuentes para el sistema font-family
+$fuente-primaria: font-family: "Kanit", sans-serif;
+$fuente-botones: font-family: "Kanit", sans-serif;
+$fuente-italic:  font-family: "Kanit", sans-serif;
+$fuente-mayusculas:  font-family: "Kanit", sans-serif;
+
+//Tamaño de tipografia - font-size
+
+$fuente: 16px;
+$fuente-mediana: 14px;
+$fuente-pequena: 12px;
+$fuente-grande: 22px;
+$fuente-label: 14px;
+$fuente-noti: 15px;
+$fuente-extrapequena: 12px;
+
+$fuente-extrap-responsive: 11px;
+
+// Encabezados
+$h1: 2.8em;
+$h2: 2em;
+$h3: 1.75em;
+$h4: 1.25em;
+$h5: 1em;
+$h6:.75em;
+
+
+
+//Estilos de tipografía - font-weight
+$fuente-thin: 100;
+$fuente-light: 300;
+$fuente-normal: 500;
+$fuente-bold: 700;
+$fuente-bolder: 900;
+
+
+//Avisos
+
+
+
+
+// ------ IMÁGENES -------------
+
+// Logotipo del sistema
+$logo: url("/Codice-Serti/img/clientes/banco_azteca/logo.svg");
+$logo-inv: url("/Codice-Serti/img/clientes/banco_azteca/logo_inv.svg");
+$logo-width: 240px;
+$logo-height: 50px;
+
+$favicon: url("/Codice-Serti/img/clientes/banco_azteca/favicon.jpg");
+
+// Avatar
+$avatar-default: url("../img/clientes/feenicia/avatar-feenicia.png");
+// Bancos
+$bbva: url("../img/bancos/BBVA.png;");
+$azteca: url("../img/bancos/AZTECA.png");
+$inbusa: url("../img/bancos/INBURSA.png");
+$banorte: url("../img/bancos/BANORTE.png");
+
+
+// Login
+
+$login: url("../img/clientes/feenicia/bg-login.png"); //Login para sistema interno
+$login-alt: url("../img/clientes/feenicia/bg-login1.png"); //Login para sistema interno / administradores
+$login-clientes: url("../img/clientes/feenicia/bg-login-clientes"); //Para panel de clientes
+
+

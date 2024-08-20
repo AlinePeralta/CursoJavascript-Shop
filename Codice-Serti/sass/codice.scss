@@ -1,0 +1,65 @@
+/*!
+ * Grupo SERTI Códice 1.0 (https://codice.gruposerti.com)
+ * Copyright 2023 Delta Desarrollo Gráfico design@serti.com.mx
+ * Licencia 
+ */
+
+// Configuración de colores, tipografía y estilos reutilizables
+
+// Tipografía principal New Hero, disponible en Adobe Kit
+// @import "https://use.typekit.net/cas8nng.css";
+
+// Elementos UI
+// En variables se definen colores y estilos generales para hacer cambio en marcas
+@import
+  'variables/_variables',
+  'variables/_iconos',
+  'variables/_bancos';
+// Se reinician estilos  
+@import
+  'base/_reset',
+  'base/_tipografia';
+
+// Layouts
+@import
+  'layouts/_mixin', 
+  // 'layouts/_navegacion',
+  'layouts/_layouts',
+  // 'layouts/_header',
+  'layouts/_contenedores',
+  'layouts/_footer',
+  'layouts/_encabezados',
+  'layouts/_divisores'; 
+
+// Componentes
+@import
+  // 'components/_botones',
+  'components/_avatar',
+  'components/_avisos',
+  'components/_modal',
+  'components/_notificaciones',
+  'components/_badge',
+  'components/_tablas',
+  'components/_formularios',
+  'components/_loading',
+  'components/_paginacion.scss',
+  'components/_empty.scss',
+  'components/_steps',
+  'components/_tabsv.scss',
+  'components/_tooltip.scss';
+  
+// Páginas
+@import
+  'pages/_login',
+  'pages/_error',
+  // 'pages/_perfil',
+  // 'pages/_administracion',
+  'pages/_cursojs';
+  // 'pages/_index';
+
+/*
+// Themes
+@import
+  'themes/light',
+  'themes/dark'; 
+*/

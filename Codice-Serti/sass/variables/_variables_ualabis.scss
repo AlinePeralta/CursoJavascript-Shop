@@ -1,0 +1,193 @@
+// Las variables globales determinan las características reutilizables por todos los elementos del sitio, puden ser colores, paddings, márgenes, etc.
+
+//Están precedidos por el símbolo "$" y al colocoralos en una clase se escribe solo su nombre
+//ej
+//color: $marca
+
+
+// A. Colores
+
+//Colores de la marca estos se modifican en caso de integración o marca blanca,
+//Se usan para las acciones principales del sitio o portal.
+
+
+//Color principal de la marca
+$marca: #233A87;
+$marca-hover: #132B7A;
+$marca-bg: #c3caf9;
+
+$bg-loading:  rgba(255, 255, 255, 0.8);
+$bg-overlay: rgba(8, 8, 65, 0.766);
+
+// Color secundario o acento de la marca
+$acento: #FF5874;
+$acento-hover: #F13555;
+$acento-bg: #fcd9e9;
+
+
+// Colores para estados de los elemntos, de preferencia no cambiar.
+$correcto: #36b57f;
+$correcto-hover: #52CB98;
+$correcto-bg: #C8EFDE;
+$advertencia: hsl(40.235, 100%, 50%);
+$advertencia-hover: hsl(40.235, 100%, 60%);
+$advertencia-bg: #FFEECC;
+$error: #e62a00;
+$error-hover: #ff431a;
+$error-bg: #FFCDC2;
+$neutral: hsl(240, 8%, 36%);
+$neutral-hover: hsl(240, 8%, 46%);
+
+
+// Colores para textos
+
+$textos: #0C0C21; // Solo se usan en textos sobre fondos claros
+$texto-hover: #002862;
+$textos-inv: #ffffff; // Solo se usan en textos sobre fondos oscuros
+$texto-error: #E62A00; //Estados de error
+
+$textos-bg: #eee;
+
+
+// Colores para fondos
+
+$blanco: #FFFFFF;
+$claro: #f6f6f6;
+$pagina: #f3f3f3;
+$fondo-cards: #ffffff;
+
+//colores de fondos de estados, etiquetas.
+$correcto-bg: #c8efde;
+$advertencia-bg: #ffeecc;
+$error-hover-bg: #ffcdc2;
+$neutral-bg: hsl(240, 8%, 86%);
+$neutral-bg2: #f3f3f3;
+
+// colores para tablas
+
+$tabla-row: #fafafa;
+$tabla_row-alt: #f1f1f1;
+//Fondos de tabla {
+$tabla-hover: #f9f9f9;
+
+
+$skeleton:#e9e9e9;
+$skeleton-load:#c1c1c1;
+
+
+
+
+// Colores para bordes
+$color-borde: hsl(240, 8%, 90%);
+// Bordes redondeados
+$borde-redondeado: 0.75em;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+// Fuentes para el sistema font-family
+$fuente-primaria: "Source Sans 3", sans-serif;
+$fuente-botones: "Source Sans 3", sans-serif;
+$fuente-italic: "Source Sans 3", sans-serif;
+$fuente-mayusculas: "Source Sans 3", sans-serif;
+
+//Tamaño de tipografia - font-size
+
+$fuente: 16px;
+$fuente-mediana: 14px;
+$fuente-pequena: 12px;
+$fuente-grande: 18px;
+$fuente-label: 14px;
+$fuente-noti: 15px;
+$fuente-extrapequena: 12px;
+
+$fuente-codError: 25px;
+$fuente-ico:22px;
+$fuente-extrap-responsive: 11px;
+
+// Encabezados
+$h1: 2.8em;
+$h2: 2em;
+$h3: 1.75em;
+$h4: 1.25em;
+$h5: 1em;
+$h6:.75em;
+
+
+
+//Estilos de tipografía - font-weight
+$fuente-thin: 100;
+$fuente-light: 300;
+$fuente-normal: 600;
+$fuente-bold: 700;
+$fuente-bolder: 900;
+
+
+//Avisos
+
+
+
+
+// ------ IMÁGENES -------------
+
+// Logotipo del sistema
+$logo: url("../img/clientes/ualabis/logo.png");
+$logo-inv: url("../img/clientes/ualabis/feenicia_logo-inv.svg");
+$logo-width: 180px;
+$logo-height: 50px;
+$favicon: url("../img/clientes/ualabis/favicon.ico");
+
+// Avatar
+$avatar-default: url("../img/clientes/ualabis/avatar-feenicia.png");
+
+
+
+// Bancos
+$bbva: url("../img/bancos/BBVA.png;");
+$azteca: url("../img/bancos/AZTECA.png");
+$inbusa: url("../img/bancos/INBURSA.png");
+$banorte: url("../img/bancos/BANORTE.png");
+
+// Perfil
+$logo-profile: url("../img/bancos/bbva.png");
+//bbva.png
+
+
+$portada-profile: url("https://cdn.pixabay.com/photo/2022/06/02/11/33/dubai-7237750_640.jpg");
+
+// https://cdn.pixabay.com/photo/2018/04/22/13/04/hallway-3341001_640.jpg
+
+// https://cdn.pixabay.com/photo/2022/06/02/11/33/dubai-7237750_640.jpg
+
+// Dispositivos
+$dispo1: url("../img/clientes/ualabis/dispositivo1.png");
+$dispo2: url("../img/clientes/ualabis/dispositivo2.png");
+
+
+
+// Estados vacios
+$empty-tx: url("../img/empty/gris/tx_empty.png");
+$empty-search: url("../img/empty/gris/search_empty.png");
+$empty-user: url("../img/empty/gris/user_empty.png");
+
+// Error
+$e401: url("../img/error/401.svg;");
+$e403: url("../img/error/403.svg;");
+$e404: url("../img/error/404.svg;");
+$e502: url("../img/error/502.svg;");
+$e505: url("../img/error/502.svg;");
+
+
+// Login
+
+$login: url("../img/clientes/ualabis/bg-login.png"); //Login para sistema interno
+$login-alt: url("../img/clientes/ualabis/bgLogin.png"); //Login para sistema interno / administradores
+$login-clientes: url("../img/clientes/ualabis/bg-login-clientes"); //Para panel de clientes
+$logo-login-bg-clientes: url("../img/clientes/ualabis/icon-login.png");
+
+// Error
+$e401: url("../img/error/401.png") no-repeat center;
+$e403: url("../img/error/403.png") no-repeat center;
+$e404: url("../img/error/404.png") no-repeat center;
+$e502: url("../img/error/502.png") no-repeat center;
+$e505: url("../img/error/505.png") no-repeat center;
+

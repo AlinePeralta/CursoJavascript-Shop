@@ -1,0 +1,309 @@
+/* -- Tablas --*/ 
+tr{
+    cursor: pointer;
+}
+ 
+.tablas{
+    margin: 0;
+}
+
+.tablas .buscador{
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: $pagina;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.tablas .buscador input, .tablas .buscador select{
+    // margin-right: 1em;
+    // margin-left: 1em;
+    max-width: 300px;
+}
+
+.tablas .buscador .checkbox{
+    padding-top: 1.3em;
+}
+.tablas .buscador button{
+    margin: 0;
+}
+
+.tablas .importe{
+    text-align: right;
+    font-weight: 600;
+    width: .4rem;
+    padding-right: 1.4rem;
+
+
+}
+.neg{ /*MONTOS NEGATIVOS*/
+    color: $error-hover; 
+}
+.ok{/*MONTOS POSITIVOS*/
+    color: $correcto-hover;
+}
+
+
+
+
+.tfiltros {
+    padding: 8px 0;
+    border-bottom: 1px solid $neutral-bg;
+    font-weight: $fuente-bold;
+    font-size: $fuente-mediana;
+}
+
+.tfiltros .muestra {
+    float: right;
+    color: $neutral;
+}
+
+.tfiltros ul {
+    list-style: none;
+    margin: 0;
+}
+
+.tfiltros ul li {
+    display: inline-block;
+    padding: 0.5em 1.5em 0  0;
+}
+
+.tfiltros ul li a{
+    padding: 0 12px 10px 12px;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    color: $neutral;
+}
+
+.tfiltros ul li a span{
+    background-color: $neutral;
+    font-weight: $fuente-light;
+    color: $blanco;
+    padding: 6px 4px 4px;
+    border-radius: 4px;
+    margin-left: 1em;
+}
+
+.tfiltros ul li a:hover{
+    border-bottom: 2px solid $acento;
+    color: $marca;
+}
+
+.tfiltros ul li a:hover span{
+    background-color: $acento;
+}
+
+
+.tfiltros ul li.seleccionado a{
+    border-bottom: 2px solid $acento;
+    color: $marca;
+}
+
+.tfiltros ul li.seleccionado a span{
+    background-color: $acento;
+}
+
+
+
+table {
+    margin: 1em 0;
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: $fuente-mediana;
+}
+
+thead {
+    /*background-color: $textos-bg;*/
+    border-radius: 12px;
+    color: $neutral;    
+}
+
+
+
+thead tr{
+    font-weight: $fuente-light;
+    background-color: $pagina;
+}
+
+thead tr th:first-child,
+tbody tr td:first-child{
+    border-radius: 12px 0 0 12px;
+}
+thead tr th:last-child,
+tbody tr td:last-child{
+    border-radius: 0 12px 12px 0;
+}
+
+
+thead tr th, tbody tr td, tfoot tr td {
+    padding: 1em 12px;
+    text-align: left;
+    border-color: transparent;
+}
+
+tbody{
+    border-bottom: 1px solid $neutral-bg;
+}
+
+tbody tr:hover{
+background-color: $tabla-hover;
+}
+
+tbody{
+    margin: 1em 0;
+}
+
+tfoot {
+    font-size: $fuente-pequena;
+    font-weight: $fuente-normal;
+}
+
+table button{
+    margin: 0;
+    padding: 4px 12px;
+    font-size: $fuente-pequena;
+}
+
+/*Detalle de tx modal*/
+
+
+
+.detalleTX{
+   width: 100%;
+   font-size: $fuente-extrapequena;
+   margin-top: -2px;
+}
+ .detalleTX tr td{
+    padding: .3em;
+
+}
+
+.detalleTX tbody{
+    border-bottom: 0px solid;
+}
+
+
+.detalleTX th{
+    text-align: left;
+    font-weight: $fuente-light;
+    font-size: $fuente-extrapequena;
+    @include mob{
+        font-size: $fuente-mediana;
+}
+@include tab{
+    font-size: $fuente-mediana;
+}
+@include lap{
+    font-size: $fuente-mediana;
+}
+    @include desk{
+        font-size: $fuente-mediana;
+}
+
+    @include desk-large {
+        font-size: $fuente-mediana;
+   
+}
+
+ }
+ .detalleTX td{
+    text-align: right;
+    font-size: $fuente-extrapequena;
+
+ }
+
+
+/*tx real time*/
+
+// .tx_new {
+// background-color: $correcto-bg;
+// animation: tx_new 2s ease-in;
+// }
+    
+// @keyframes tx_new {
+//   from {
+//     transform: scale(.4); 
+//   }
+//   to {
+//     transform: scale(1);
+
+//   }
+  
+// 100%{
+//     background-color: transparent;
+// }
+// }
+
+.tx_new  {
+    border: 2px solid $neutral-bg;
+    
+  }
+  .tx_new:before {
+    background: linear-gradient(45deg, #ccc 48.9%, $marca 49%);
+    border-radius: 20px !important;
+    z-index: -1;
+    animation: borderGradient 8s linear both infinite;
+  }
+  @keyframes borderGradient {
+    0%,
+    100% {
+      background-position: 0% 100%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+  }
+ 
+
+
+ @media (max-width: 1600px) {
+
+    .modalbox {
+        height: 98%;
+        padding: 1.4em;
+        margin: .8em 0;
+      
+    }
+
+    .datosComercio{
+        margin-top: -8px;
+    }
+
+    .detalleTX{
+     
+        font-size: $fuente-extrap-responsive;
+        margin-top: -6px;
+     }
+      .detalleTX tr td{
+         padding: .08em;
+     
+     }
+     
+     .detalleTX tbody{
+         border-bottom: 0px solid;
+     }
+     
+     
+     .detalleTX th{
+         text-align: left;
+         font-size: $fuente-pequena;
+     
+      }
+      .detalleTX td{
+         text-align: right;
+         font-size: $fuente-pequena;
+     
+      }   
+ }
+ 
+ .disable-click {
+    pointer-events: none;
+}
+.pointer{
+  cursor: pointer;  
+}
+

@@ -1,0 +1,81 @@
+
+/* Header */
+
+
+// header --------------- 
+
+
+header {
+    width: 100%;
+    background-color: $blanco;
+/*    font-size: $fuente-pequena;*/
+    display: inline-grid;
+    
+    padding: .8em 2em;
+    line-height: 1em;
+
+    grid-template:
+    "logo menubar usermenu" /
+    280px auto 350px;
+}
+
+header .logo {
+    grid-area: logo;
+}
+header .menubar {
+    grid-area: menubar;
+}
+header .usermenu {
+    grid-area: usermenu;
+    text-align: right;
+}
+
+header .usermenu li{
+    display: inline-block;
+    vertical-align: middle!important;
+    
+
+}
+
+
+
+header a {
+    color: $textos;
+
+}
+
+
+header .logo {
+    background-image: $logo;
+    width: $logo-width;
+    height: $logo-height;
+    left: 1em;
+    top: 8px;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-indent: -99999px;
+
+}
+
+header .logo span {
+    display: none;
+}
+
+
+
+// Cambio de estilo para marca y versión dark
+body.marca header {
+    background-color: $marca;
+}
+
+body.dark header {
+    background-color: $textos;
+}
+
+
+body.marca header .logo,
+body.dark header .logo {
+    background-image: $logo-inv;
+    background-size: 70%;
+
+}

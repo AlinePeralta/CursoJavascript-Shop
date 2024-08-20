@@ -1,0 +1,325 @@
+/* -- Formularios --*/
+
+
+form {
+    margin: 2em 0;
+    max-width: 600px;
+}
+
+.f-control {
+    margin-bottom: 1em;
+}
+
+.helptext {
+    font-size: $fuente-pequena;
+}
+
+
+label {
+    display: block;
+    font-size: $fuente-label;
+    font-weight: $fuente-normal;
+
+}
+
+fieldset {
+    padding: 1em 1em 1em 0;
+    margin-right: 2em;
+    border: 0;
+    border-bottom: 1px solid $marca-bg;
+}
+
+legend {
+    font-weight: $fuente-bold;
+    text-transform: $fuente-mayusculas;
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+
+input, select {
+    font-family: $fuente-primaria;
+    font-weight: $fuente-light;
+    padding: 1em 12px;
+    border: 1px solid $marca-bg;
+    border-radius: 4px;
+    display: block;
+    width: calc(100% - 2em);
+    color: $textos;
+    transition: ease-in-out, width .35s ease-in-out;
+    outline: none;
+}
+
+
+input:focus {
+    box-shadow: 0px 4px 16px $marca-bg;
+    border-color: $marca-hover;
+}
+
+
+input.error {
+    color: $error;
+    border-color: $error;
+}
+
+
+::placeholder {
+    color: $neutral-hover;
+    opacity: 1;
+    /* Firefox */
+}
+
+::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: $neutral;
+}
+
+
+textarea {
+    font-family: $fuente-primaria;
+    font-weight: $fuente-light;
+    padding: 12px 8px;
+    border: 1px solid $marca-bg;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    color: $textos;
+    transition: ease-in-out, width .35s ease-in-out;
+    outline: none;
+}
+
+/*--- checkboxes ---*/
+
+
+/*
+Checkbox
+Permite al usuario elegir entre una o más opciones*/
+
+.checkbox label {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 32px;
+    align-self: center;
+}
+
+.checkbox.horizontal {
+    display: inline-block;
+
+}
+
+.checkbox label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox label span {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 4px solid $neutral-bg;
+    border-radius: 2px;
+    background-color: $blanco;
+}
+
+.checkbox label:hover input~span {
+    background-color: $neutral-bg;
+}
+
+.checkbox label input:checked~span {
+    background-color: $marca;
+    border-color: $marca;
+}
+
+.checkbox span:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox label input:checked~span:after {
+    display: block;
+}
+
+.checkbox label span:after {
+    left: 4px;
+    top: -0px;
+    width: 5px;
+    height: 10px;
+    border: solid $textos-inv;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*-- radio button --*/
+
+
+.radio label {
+    display: block;
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 24px;
+    align-self: center;
+}
+
+.radio.horizontal {
+    display: inline-block;
+
+}
+
+.radio label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio label span {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    border: 4px solid $neutral-bg;
+    border-radius: 12px;
+    background-color: $blanco;
+}
+
+.radio label:hover input~span {
+    background-color: $neutral-bg;
+}
+
+.radio label input:checked~span {
+    background-color: $blanco;
+    border-color: $marca;
+}
+
+.radio span:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio label input:checked~span:after {
+    display: block;
+}
+
+.radio label span:after {
+    left: 2px;
+    top: 2px;
+    width: 4px;
+    height: 4px;
+    background: $marca;
+    border: solid $marca;
+    border-width: 3px;
+    border-radius: 8px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*--- range --*/
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    border: 0;
+}
+
+input[type="range"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: $neutral-bg;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -6px;
+
+    background-color: $marca;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 14px;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+    border: 1px solid $marca-hover;
+    outline: 2px solid $marca-hover;
+    outline-offset: 0.125rem;
+}
+
+/******** Firefox styles ********/
+
+input[type="range"]::-moz-range-track {
+    background-color: $marca;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+}
+
+input[type="range"]::-moz-range-thumb {
+    border: none;
+    border-radius: 0;
+
+    background-color: $neutral-bg;
+    height: 2rem;
+    width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+    border: 1px solid $marca-hover;
+    outline: 2px solid $marca-hover;
+    outline-offset: 0.125rem;
+}
+
+
+
+/*-- select ---*/
+
+
+/* The container must be positioned relative: */
+
+select option {
+    padding: 1em !important;
+    margin: 1em;
+    line-height: 2em;
+    font-weight: $fuente-light;
+  }
+
+
+input.search{
+    background-image: url(../img/iconos/buscar.svg);
+    background-repeat: no-repeat;
+    background-position:  8px center;
+    padding-left: 40px;
+}

@@ -1,0 +1,26 @@
+[
+   {
+      "id": "valkiria-so",
+      "titulo": "Valkiria SO",
+      "precio": 1500,
+      "img": "https://hola-yo-soy.com.mx/js/Codice-Serti/img/clientes/feenicia/dispositivo1.png"
+   },
+   {
+      "id": "valkiria-go",
+      "titulo": "Valkiria GO",
+      "precio": 3500,
+      "img": "https://hola-yo-soy.com.mx/js/Codice-Serti/img/clientes/feenicia/dispositivo2.png"
+   },
+   {
+      "id": "valkiria-max",
+      "titulo": "Valiria Max",
+      "precio": 2400,
+      "img": "https://hola-yo-soy.com.mx/js/Codice-Serti/img/clientes/feenicia/dispositivo5.png"
+   },
+   {
+      "id": "valkiria-pro",
+      "titulo": "Valkiria Pro",
+      "precio": 4500,
+      "img": "https://hola-yo-soy.com.mx/js/Codice-Serti/img/clientes/feenicia/dispositivo4.png"
+   }
+]

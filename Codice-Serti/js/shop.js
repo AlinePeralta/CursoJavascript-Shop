@@ -1,3 +1,5 @@
+
+
 const carrito = JSON.parse(localStorage.getItem("carrito"))  || [] ;
 
 const dispositivos = [
@@ -5,25 +7,25 @@ const dispositivos = [
         id: "valkiria-so",
         titulo: "Valkiria SO",
         precio: 1500,
-        img: "/Codice-Serti/img/clientes/feenicia/dispositivo1.png",
+        img: "https://hola-yo-soy.com.mx/js/Codice-Serti/img/clientes/feenicia/dispositivo1.png",
     },
     {
         id: "valkiria-go",
         titulo: "Valkiria GO",
         precio: 3500,
-        img: "/Codice-Serti/img/clientes/feenicia/dispositivo2.png",
+        img: "https://hola-yo-soy.com.mx/js/Codice-Serti/img/clientes/feenicia/dispositivo2.png",
     },
     {
         id: "valkiria-max",
         titulo: "Valiria Max",
         precio: 2400,
-        img: "/Codice-Serti/img/clientes/feenicia/dispositivo5.png",
+        img: "https://hola-yo-soy.com.mx/js/Codice-Serti/img/clientes/feenicia/dispositivo5.png",
     },
     {
         id: "valkiria-pro",
         titulo: "Valkiria Pro",
         precio: 4500,
-        img: "/Codice-Serti/img/clientes/feenicia/dispositivo4.png",
+        img: "https://hola-yo-soy.com.mx/js/Codice-Serti/img/clientes/feenicia/dispositivo4.png",
     },
     // {
     //     id: "bbpos",
@@ -87,6 +89,19 @@ if (cantidadDispositvos){
 
    
     actualizarCarrito();
+    Toastify({
+        text: dispositivos.titulo + " agregado al carrito",
+        duration: 3000,
+        close: true,
+        avatar: dispositivos.img,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", 
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #f04c94, #ed1d78)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
 
 }
 
@@ -147,7 +162,30 @@ function carritoTotalprecio(){
 
 }
 
-vaciarCarrito.addEventListener("click", () =>{
-    carrito.length = 0;
-    actualizarCarrito();
-})
+vaciarCarrito.addEventListener("click", () => {
+    const cantidadDispositvos = carrito.reduce((acc, prod)=> acc + prod.cantidad, 0);
+
+    Swal.fire({
+        title: '¿Deseas vacíar tu carrito?',
+        text: 'Se eliminaran ' + cantidadDispositvos + " Dispositivos.",
+        icon: 'question',
+        showDenyButton: true,
+        denyButtonText: "No",
+        confirmButtonText: 'Sí, vaciar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            carrito.length = 0;
+            actualizarCarrito();
+            Swal.fire({
+                icon: "success",
+                title: "Carrito vacío",
+                showConfirmButton: false, // Corregido
+                timer: 1500
+            });
+        }
+    });
+});
+
+
+//Librería sweet alert
+

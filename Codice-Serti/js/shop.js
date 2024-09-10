@@ -13,7 +13,7 @@ async function getData() {
     } catch (error) {
       console.error(error.message);
     }
-  }
+  }  
 
 
 async function renderShopItems() {

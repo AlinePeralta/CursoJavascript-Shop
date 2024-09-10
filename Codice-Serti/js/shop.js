@@ -1,6 +1,6 @@
 // Obtener productos desde tu JSON
-async function getData() {
-    const url = "https://fakestoreapi.com/products";
+async function dispositivosJson() {
+    const url = "https://run.mocky.io/v3/1ccaac4f-2aee-450f-add6-722592bfa6f5";
     try {
       const response = await fetch(url);
       if (!response.ok) {
@@ -16,9 +16,9 @@ async function getData() {
   }  
 
 
-async function renderShopItems() {
+async function cargaDispositivos() {
     const contenedorDispositivos = document.querySelector("#dispositivos");
-    const dispositivos = await getData(); 
+    const dispositivos = await dispositivosJson(); 
 
     dispositivos.forEach((dispositivo) => {
         let div = document.createElement("div");
@@ -26,7 +26,7 @@ async function renderShopItems() {
 
         div.innerHTML = `
             <div class="dipositivos_img">
-                <img class="dispo_img" src="${dispositivo.image}" alt="${dispositivo.title}">
+                <img class="dispo_img" src="${dispositivosJson.image}" alt="${dispositivosJson.title}">
             </div>
             <div class="dispositivos_info">
                 <h3 class="dispositivos_nombre">${dispositivo.title}</h3>
@@ -51,7 +51,7 @@ async function renderShopItems() {
 }
 
 // Cargar productos al cargar la página
-renderShopItems();
+cargaDispositivos();
 
 
 // Función para agregar un dispositivo al carrito

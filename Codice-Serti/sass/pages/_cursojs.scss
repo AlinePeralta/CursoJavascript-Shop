@@ -67,7 +67,7 @@ ul li{
     border-radius: 20px;
     overflow-y: auto; 
     display: grid;
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 4fr 3fr;
     gap: 1rem;
 
     @include desk {
@@ -118,8 +118,17 @@ ul li{
         margin-bottom: 8px;
         font-size: $h6;
     }
+    .input-cantidad {
+        height: 2rem;   
+        width: 50px;
+        padding: 4px;
+        margin-bottom: 10px;
+      }
 
 }
+
+
+  
 
 .carritoEmpty{
     display: flex;
@@ -204,6 +213,7 @@ ul li{
         background-color: $acento-bg;
         color: $acento;
         font-size: $fuente;
+        margin-top: 1rem;
     }
 
     @include desk{

@@ -1992,6 +1992,10 @@ input.error {
   border-color: #e62a00;
 }
 
+.input-cantidad {
+  height: 10px;
+}
+
 ::placeholder {
   color: hsl(240, 8%, 46%);
   opacity: 1;
@@ -3719,7 +3723,7 @@ ul li {
   border-radius: 20px;
   overflow-y: auto;
   display: grid;
-  grid-template-columns: 4fr 2fr;
+  grid-template-columns: 4fr 3fr;
   gap: 1rem;
 }
 @media (min-width: 1200px) and (max-width: 1440px) {
@@ -3772,6 +3776,12 @@ ul li {
 .carritoDispo p {
   margin-bottom: 8px;
   font-size: 0.75em;
+}
+.carritoDispo .input-cantidad {
+  height: 2rem;
+  width: 50px;
+  padding: 4px;
+  margin-bottom: 10px;
 }
 
 .carritoEmpty {
@@ -3854,6 +3864,7 @@ ul li {
   background-color: #fcd9e9;
   color: #ed1d78;
   font-size: 16px;
+  margin-top: 1rem;
 }
 @media (min-width: 1200px) and (max-width: 1440px) {
   .dispositivo-agregar {

@@ -1,5 +1,5 @@
 // URL del archivo JSON
-const urlJSON = "https://run.mocky.io/v3/1ccaac4f-2aee-450f-add6-722592bfa6f5";
+const urlJSON = "https://run.mocky.io/v3/dd9c4abb-a32a-407d-a409-b8890b02f03e";
 
 // Obtener los dispositivos usando fetch
 const obtenerDispositivos = async () => {
